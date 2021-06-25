@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3B0A35;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* .fab{
+   font-weight: 00;
+} */
+
+#header{
+  color: white;
+  background-color: #27072394;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 0 1px 4px 0 rgba(255, 255, 255, 0.568);
+  align-items: center;
+  justify-content: space-between; 
+}
+#app-name{
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+}
+#app-logo{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+
+.far.fa-handshake{
+    margin: 5px;
+    margin-right: 10px;
+    font-size: 36px;
+}
+
+
+.card {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 550px;
+    margin: 30px;
+    background-color: white;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .14);
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 16px;
+}
+
+.card .card-header {
+    position: relative;
+    height: 48px;
+}
+
+.card .card-header .profile-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.card .card-body {
+    padding: 10px 40px;
+}
+
+.card .card-body .full-name {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+}
+
+.card .card-body .profession_location {
+    font-size: 14px;
+    color: rgb(126, 123, 123);
+    margin: 5px 0 0;
+}
+
+/* .card .card-body .city {
+    font-weight: 500;
+    margin: 10px 0 0;
+} */
+
+.card .card-body .desc {
+    line-height: 18px;
+    margin: 8px;
+}
+
+.card .social-icon {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.social-icon{
+    padding: 20px;
+}
+.card .social-icon.facebook {
+    color: white;
+    background-color: #3b5999;
+}
+.card .social-icon.twitter {
+    color: white;
+    background-color: #55acee;
+}
+
+.card .social-icon.instagram {
+    background-color: #C13584;
+    color: #fff;
+}
+
+.card .social-icon.globe {
+    background-color: #F4B400;
+    color: #fff;
+}
+
+.card .social-icon.linkedin {
+    background-color: #0077b5;
+    color: #fff;
+}
+
+.card .social-icon.github {
+    background-color: #000;
+    color: #fff;
+}
+
+.card .card-footer {
+    display: table;
+    width: 100%;
+    border-top: 2px solid #e6e6e6d8;
+}
+
+.card .card-footer .col {
+    display: table-cell;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.card .card-footer .count {
+    font-size: 18px;
+    font-weight: bold ;
+}
+
+.vr {
+    
+    border-right: 2px solid #e6e6e6d8;
+    color: #0f9d58d2;
+}
+.col{
+    width: 250px;
+}
+#mail{
+    color: #c42b1de1
+    ;
+}
+
+
+.input{
+    outline: none;
+    background-color: #27072394 ;
+    /* background: transparent; */
+    width: 200px;
+    height: 12px;
+    padding: 12px;
+    margin-bottom: 2em;
+    border: 1px solid white;
+    /* border-radius: 8px; */
+    color: #fff;
+    box-shadow: 0px 0px 6px 0px rgb(190, 190, 190);
+
+}
+#description{
+    outline: none;
+    background-color: #27072394 ;
+    /* background: transparent; */
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 2em;
+    border: 1px solid white;
+    /* border-radius: 8px; */
+    color: #fff;
+    box-shadow: 0px 0px 6px 0px rgb(190, 190, 190);
+}
+.input:hover, #description:hover {
+    background: #5a14518e ;
+}
+.input:focus, #description:focus {
+    background:#5a14518e;
+    /* rgba(116, 24, 105, 0.6) ;   */
+}
+
+::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
+h4{
+    margin-bottom: 20px;
+}
+.check{
+    margin: 5px;
+}
+h3{
+    margin: 20px;
+}
+
+/*divs*/
+
+.left{
+    margin: 10px;
+}
+#details{
+    margin-right: 30px;
+}
+
+#user_selection{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    text-align: justify;
+}
+#card-display{
+    background-color: #27072394;
+    /* border-radius: 25px; */
+    margin: 10px;
+    margin-right: 50px;
+    margin-top: 0;
+    padding: 5px;
+    box-shadow: 1px 1px 15px 1px rgb(190, 190, 190);
+    
+}
+
+/*to initially hide social media accounts*/
+#linkedin_name, #github_name, #twitter_name, #facebook_name, #instagram_name, #website_name{
+    display: none;
+}
+
+#download{
+    font-size: 12px;
+    background-color: #27072394;
+    padding: 8px;
+    margin: 8px;
+    margin-top: 0px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0px 0px 6px 0px rgb(190, 190, 190);
+}
+  
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    background-color: #27072394;
+    text-align: center;
+    padding: 2px;
+    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.568);
+}
+
+#dark{
+    margin-left: 30px;
+}
+  
+ 
+@media screen and (max-width: 575px) {
+    .card {
+        width: 96%;
+    }
+
+    .card .card-body {
+        padding: 10px 20px;
+    }
+
+    .card .card-footer .col {
+        padding: 0 10px;
+    }
+
+    .card .card-footer .count {
+        display: block;
+        margin-bottom: 5px;
+    }
+}

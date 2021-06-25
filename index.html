@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hello. | Business Card Maker</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="html2canvas.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+</head>
+<body>
+
+    <div id="header">
+        <div id="app-name">
+            <b>hello.</b>
+        </div>
+        <div id="app-logo">
+            <i class="far fa-handshake">  </i>
+            <b>Your Business Card Builder</b>
+        </div>
+    </div>
+
+    <h3>Enter Details To Generate Your Customised Card: </h3>
+    <div style="float: left;" id="user_selection">
+
+        <div id="userinput">
+
+            <div class="left" id="details" style="float: left;">
+                <input class="input" id="name" placeholder="Name" onchange="updateName()"><br>
+                <input class="input" id="work" placeholder="Profession" onchange="updateWork()"><br>
+                <input class="input" id="workplace" placeholder="Workplace" onchange="updateWorkplace()"><br>
+                <input class="input" id="city" placeholder="City" onchange="updateCity()"><br>
+                <input class="input" id="country" placeholder="Country" onchange="updateCountry()"><br>
+                <textarea class="input" id="description" placeholder="Short Description" onchange="updateDesc()"></textarea><br>
+                <input class="input" id="phone" placeholder="Phone" onchange= "updatePhone()"><br>
+                <input class="input"id="email" placeholder="Email"  onchange= "updateEmail()"><br>
+            </div>
+
+            <div class="left" id="social" style="float: right;">
+                <h4>Social Media Accounts:</h4>
+
+                <input class="check" type="checkbox" id="linkedin" value="linkedin" onclick="checkBoxes('linkedin'); clearSocials();">
+                <label for="linkedin">LinkedIn</label>
+                <input class="check" type="checkbox" id="github" value="github" onclick="checkBoxes('github'); clearSocials();">
+                <label for="github">GitHub</label>
+                <input class="check" type="checkbox" id="twitter" value="twitter" onclick="checkBoxes('twitter'); clearSocials();">
+                <label for="twitter">Twitter</label>
+                <br>
+                <input class="check" type="checkbox" id="facebook" value="facebook" onclick="checkBoxes('facebook'); clearSocials();">
+                <label for="facebook">Facebook</label>
+                <input class="check" type="checkbox" id="instagram" value="instagram" onclick="checkBoxes('instagram'); clearSocials();">
+                <label for="instagram">Instagram</label>
+                <input class="check"type="checkbox" id="website" value="website" onclick="checkBoxes('website'); clearSocials();">
+                <label for="website">Website</label>
+                <br><br><br>
+
+                <input class="input" id="linkedin_name" placeholder="LinkedIn Username" onchange="updateLinkedin();"><br>
+                <input class="input" id="github_name" placeholder="GitHub Username" onchange="updateGithub();"><br>
+                <input class="input" id="twitter_name" placeholder="Twitter Username" onchange="updateTwitter();"><br>
+                <input class="input" id="facebook_name" placeholder="Facebook Username" onchange="updateFacebook();"><br>
+                <input class="input" id="instagram_name" placeholder="Instagram Username" onchange="updateInstagram();"><br>
+                <input class="input" id="website_name" placeholder="Website URL" onchange="updateWebsite();"><br>
+               
+				<div id="theme">
+                    <h4>Theme:</h4>
+
+                    <input class="theme" type="radio" id="light" value="light" name="theme" onclick="lightTheme();">
+                    <label for="light">Light</label>
+
+                    <input class="theme" type="radio" id="dark" value="dark" name="theme" onclick="darkTheme();">
+                    <label for="dark">Dark</label>
+				</div>
+				
+            </div>  
+            
+
+        </div>
+    </div>
+
+    <div id="card-display" style="float: right;" align = "center">
+        <div class="card" id="card">
+        
+            <div class="card-body">
+                <p class="full-name" id="card-name">Jane Doe</p>
+                <p class="profession_location" id="prof_loc_name">Software Developer | IBM | Chennai, India</p>
+                <p class="desc" id="desc_content">Have 5+ years of experience in web and mobile application development. Contact me for building your websites and mobile apps</p>
+                <p id="socials-display">
+                    <span id="linkedin_show" class="social-icon linkedin"><i id="linkedin_display" class="fab fa-linkedin"> janedoe </i></span>
+                    <span id="github_show" class="social-icon github"><i id="github_display" class="fab fa-github"> jane188 </i></span>
+                    <span id="twitter_show" class="social-icon twitter"><i id="twitter_display" class="fab fa-twitter"> janedoe18 </i></span>
+                    <span id="instagram_show" class="social-icon instagram"><i id="instagram_display" class="fab fa-instagram"> janeee </i></span>
+                    <span id="facebook_show" class="social-icon facebook"><i id="facebook_display" class="fab fa-facebook-f"> jane.d </i></span>
+                    <span id="website_show" class="social-icon globe"><i id="website_display" class="fas fa-globe"> www.janedoe.in </i></span>
+                    
+                </p>
+            </div>
+            <div class="card-footer">
+                <div class="col vr">
+                    <span class="count"><i id="contact_no" class="fas fa-phone"> 9790124086</i></span>
+                </div>
+                <div id="mail" class="col">
+                    <span class="count"><i id="contact_mail" class="fas fa-envelope-square"> janedoe@gmail.com</i></span> 
+                </div>
+            </div>
+        </div>
+
+        <input type="button" value="DOWNLOAD" id="download">
+    </div>
+
+    <footer class="footer">
+        © 2021 Suba Shree V S 
+    </footer>
+    
+</body>
+<script>
+    document.getElementById("download").addEventListener("click", function() {
+    
+    html2canvas(document.querySelector('.card')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'file-name.jpeg');
+    });
+});
+</script>
+</html>
+
